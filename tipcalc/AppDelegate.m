@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  tipCalculator
 //
-//  Created by Vipul Thakur on 6/17/14.
+//  Created by Vipul Thakur on 16/6/14.
 //  Copyright (c) 2014 ___FULLUSERNAME___. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "TipViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    TipViewController *vc =[[TipViewController alloc] init];
+    UINavigationController  *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
